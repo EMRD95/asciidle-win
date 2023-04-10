@@ -21,7 +21,7 @@ After running the command, you will find the .exe file in the dist folder create
 
 For asciidle to work, set the path to your ASCII art folder accordingly.
 
-![image](https://user-images.githubusercontent.com/114953576/230938836-d10e9b4e-9f83-4f45-ad65-c31600587653.png)
+![image](https://user-images.githubusercontent.com/114953576/230944421-0e454102-b69f-4761-9a36-079e0acd831c.png)
 
 You can also set asciidle to PATH so it runs from any command line (cmd or powershell) by typing "asciidle"
 
