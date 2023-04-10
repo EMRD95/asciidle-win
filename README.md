@@ -26,4 +26,4 @@ You can also set asciidle to PATH so it runs from any command line (cmd or power
 
 You can also run the program directly by executing asciidle.exe.
 
-To automatically download some old school ASCII art, run download-ascii-art.bat directly or from the python script (NSFW).
+To automatically download some old school ASCII art, run download-ascii-art.bat directly or from asciidle-config.exe (NSFW).
