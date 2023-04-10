@@ -17,4 +17,16 @@ pip install pyinstaller
 
 pyinstaller --onefile --noconsole asciidle-config.py
 
-After running the command, you will find the .exe file in the dist folder created in the same directory as your Python script. Move it to the main folder.
+After running the command, you will find the .exe file in the dist folder created in the same directory as your Python script. Move it to the main folder to set up configuration.
+
+For asciidle to work, set the path to your ASCII art folder accordingly.
+
+![image](https://user-images.githubusercontent.com/114953576/230938836-d10e9b4e-9f83-4f45-ad65-c31600587653.png)
+
+You can also set asciidle to PATH so it runs from any command line (cmd or powershell) by typing "asciidle"
+
+![image](https://user-images.githubusercontent.com/114953576/230939010-e973b1eb-bb88-4841-95cc-24ff50adf40a.png)
+
+You can also run the program directly by executing asciidle.exe
+
+To make things more spicy, download the data set from the txt folder by running the .bat script.
