@@ -29,4 +29,4 @@ You can also set asciidle to PATH so it runs from any command line (cmd or power
 
 You can also run the program directly by executing asciidle.exe
 
-To make things more spicy, download the data set from the txt folder by running the .bat script.
+To make things more spicy, you can automatically download some old school ASCII art by running download.bat
