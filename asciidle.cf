@@ -1,5 +1,5 @@
 # Path for the ASCII art txt files
-%USERPROFILE%\asciidle-win\txt
+C:\Users\User\Documents\asciidle-win\txt
 # Color code (use ANSI color escape codes)
 97
 # Scroll speed (less is more)
