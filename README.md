@@ -22,7 +22,7 @@ For asciidle to work, set the path to your ASCII art folder accordingly.
 
 You can also set asciidle to PATH so it runs from any command line (cmd or powershell) by typing "asciidle"
 
-![image](https://user-images.githubusercontent.com/114953576/230939010-e973b1eb-bb88-4841-95cc-24ff50adf40a.png)
+![image](https://user-images.githubusercontent.com/114953576/230951773-c1a57979-c7e5-4ffd-91ae-3e432653116c.png)
 
 You can also run the program directly by executing asciidle.exe.
 
