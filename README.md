@@ -15,6 +15,6 @@ You can use the python configuration GUI as it is or make it an executable too :
 
 pip install pyinstaller
 
-pyinstaller --onefile --noconsole asciidle_gui.py
+pyinstaller --onefile --noconsole asciidle-config.py
 
 After running the command, you will find the .exe file in the dist folder created in the same directory as your Python script. Move it to the main folder.
