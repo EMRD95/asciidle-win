@@ -1,21 +1,18 @@
 # asciidle-win
+
 Asciidle for windows in C++. This small program lets you display ASCII art in your terminal (cmd or powershell) with some configurations available.
 
-To compile the C++ program :
+To compile the C++ program:
 
-Install Visual Studio Build Tools 2019 with "Desktop development with C++"
+1. Install Visual Studio Build Tools 2019 with "Desktop development with C++"
+2. Open Developer Command Prompt for VS 2019 (with Administrator rights) and cd to the folder containing asciidle.cpp
+3. `rc /r app_resources.rc`
+4. `cl /EHsc asciidle.cpp app_resources.res /link /out:asciidle.exe`
 
-Open Developer Command Prompt for VS 2019 (with Administrator rights) and cd to the folder containing asciidle.cpp
+You can use the python configuration GUI as it is or make it an executable too:
 
-rc /r app_resources.rc
-
-cl /EHsc asciidle.cpp app_resources.res /link /out:asciidle.exe
-
-You can use the python configuration GUI as it is or make it an executable too :
-
-pip install pyinstaller
-
-pyinstaller --onefile --noconsole asciidle-config.py
+1. `pip install pyinstaller`
+2. `pyinstaller --onefile --noconsole asciidle-config.py`
 
 After running the command, you will find the .exe file in the dist folder created in the same directory as your Python script. Move it to the main folder to set up configuration.
 
@@ -27,6 +24,6 @@ You can also set asciidle to PATH so it runs from any command line (cmd or power
 
 ![image](https://user-images.githubusercontent.com/114953576/230939010-e973b1eb-bb88-4841-95cc-24ff50adf40a.png)
 
-You can also run the program directly by executing asciidle.exe
+You can also run the program directly by executing asciidle.exe.
 
-To make things more spicy, you can automatically download some old school ASCII art by running download-ascii-art.bat directly or from the python script (NSFW).
+To automatically download some old school ASCII art, run download-ascii-art.bat directly or from the python script (NSFW).
