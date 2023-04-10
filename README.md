@@ -29,4 +29,4 @@ You can also set asciidle to PATH so it runs from any command line (cmd or power
 
 You can also run the program directly by executing asciidle.exe
 
-To make things more spicy, you can automatically download some old school ASCII art by running download.bat
+To make things more spicy, you can automatically download some old school ASCII art by running download-ascii-art.bat
