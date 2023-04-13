@@ -12,10 +12,16 @@
 
 using namespace std;
 
+// Function to display the content of the ASCII art file with specified color and scroll speed
 void display_ascii_art(const string &filename, int &row, const string &color_code, int scroll_speed);
+
+// Function to choose a random ASCII art file from the specified folder
 void random_ascii_art(const string &folder, string &filename);
+
+// Function to get the width of the console
 int get_console_width();
 
+// Function to get the path of the executable
 string get_executable_path() {
     char buffer[MAX_PATH];
     GetModuleFileName(NULL, buffer, MAX_PATH);
@@ -23,6 +29,7 @@ string get_executable_path() {
     return string(buffer).substr(0, pos);
 }
 
+// Function to read the configuration file and return the folder path, color code, and scroll speed
 tuple<string, string, int> read_config(const string &config_file) {
     ifstream file(config_file);
     if (!file) {
