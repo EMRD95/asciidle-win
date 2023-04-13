@@ -2,6 +2,7 @@ import os
 import tkinter as tk
 from tkinter import filedialog, messagebox
 import sys
+import ctypes
 
 class ANSIColorPicker(tk.Toplevel):
     ANSI_COLORS = {
@@ -29,7 +30,6 @@ class ANSIColorPicker(tk.Toplevel):
         self.title("ANSI Color Picker")
         self.create_color_buttons()
 
-        # Position the color picker window close to the pick color button
         x = pick_color_button.winfo_rootx() + pick_color_button.winfo_width()
         y = pick_color_button.winfo_rooty()
         self.geometry(f"+{x}+{y}")
@@ -72,7 +72,6 @@ class AsciidleConfigEditor:
         self.label_speed = tk.Label(master, text="Scroll Latency:")
         self.label_speed.grid(row=2, column=0, sticky="W")
         
-        # Add a new button to call the add_to_path method
         self.add_to_path_button = tk.Button(master, text="Add asciidle to PATH", command=self.add_to_path)
         self.add_to_path_button.grid(row=4, columnspan=3)
 
@@ -112,22 +111,27 @@ class AsciidleConfigEditor:
                 import winreg
 
                 try:
-                    key = winreg.OpenKey(
-                        winreg.HKEY_CURRENT_USER,
-                        "Environment",
-                        access=winreg.KEY_ALL_ACCESS,
-                    )
-                    winreg.SetValueEx(key, "PATH", 0, winreg.REG_EXPAND_SZ, new_path)
-                    winreg.CloseKey(key)
-                    messagebox.showinfo("Success", "Asciidle added to PATH")
+                    # Check for administrator privileges
+                    if ctypes.windll.shell32.IsUserAnAdmin():
+                        key = winreg.OpenKey(
+                            winreg.HKEY_LOCAL_MACHINE,
+                            r"SYSTEM\CurrentControlSet\Control\Session Manager\Environment",
+                            access=winreg.KEY_ALL_ACCESS,
+                        )
+                        winreg.SetValueEx(key, "Path", 0, winreg.REG_EXPAND_SZ, new_path)
+                        winreg.CloseKey(key)
+                        messagebox.showinfo("Success", "Asciidle added to PATH")
+                    else:
+                        ctypes.windll.shell32.ShellExecuteW(
+                            None, "runas", sys.executable, " ".join(sys.argv), None, 1
+                        )
+                        sys.exit()
                 except Exception as e:
                     messagebox.showerror("Error", f"Failed to add Asciidle to PATH: {e}")
             else:
                 messagebox.showerror("Error", "Adding Asciidle to PATH is only supported on Windows")
         else:
             messagebox.showinfo("Info", "Asciidle is already in PATH")
-
-
 
     def load_config(self):
         try:
@@ -138,8 +142,7 @@ class AsciidleConfigEditor:
                 self.entry_color.delete(0, tk.END)
                 self.entry_color.insert(0, lines[3].strip())
                 self.entry_speed.delete(0, tk.END)
-                self.entry_speed.insert(0, lines[5].strip
-                ().strip())
+                self.entry_speed.insert(0, lines[5].strip().strip())
         except FileNotFoundError:
             messagebox.showerror("Error", "asciidle.cf not found")
 
@@ -157,3 +160,4 @@ if __name__ == "__main__":
     root = tk.Tk()
     gui = AsciidleConfigEditor(root)
     root.mainloop()
+
