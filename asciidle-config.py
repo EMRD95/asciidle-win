@@ -1,6 +1,6 @@
 import os
 import tkinter as tk
-from tkinter import filedialog, messagebox
+from tkinter import filedialog, messagebox, PhotoImage
 import sys
 import ctypes
 
@@ -44,8 +44,6 @@ class ANSIColorPicker(tk.Toplevel):
         self.callback(color_code)
         self.destroy()
 
-
-
 class AsciidleConfigEditor:
     def __init__(self, master):
         self.master = master
@@ -71,17 +69,27 @@ class AsciidleConfigEditor:
 
         self.label_speed = tk.Label(master, text="Scroll Latency:")
         self.label_speed.grid(row=2, column=0, sticky="W")
-        
-        self.add_to_path_button = tk.Button(master, text="Add asciidle to PATH", command=self.add_to_path)
-        self.add_to_path_button.grid(row=4, columnspan=3)
 
         self.entry_speed = tk.Entry(master, width=10)
         self.entry_speed.grid(row=2, column=1, sticky="W")
 
         self.save_button = tk.Button(master, text="Save", command=self.save_config)
-        self.save_button.grid(row=3, columnspan=3)
+        self.save_button.grid(row=6, columnspan=3)
+
+        # Create a button for downloading stuffs
+        self.download_stuffs_button = tk.Button(master, text="Download ASCII art", command=self.download_stuffs)
+        self.download_stuffs_button.grid(row=5, column=0, columnspan=2, sticky="W")
+
+     # Load the shield icon
+        self.admin_shield_image = PhotoImage(file="admin_shield.png")
+
+        # Create a button with text and the shield icon
+        self.add_to_path_button = tk.Button(master, text="Add asciidle to PATH ", command=self.add_to_path,
+                                            image=self.admin_shield_image, compound="right")
+        self.add_to_path_button.grid(row=4, column=0, columnspan=2, sticky="W", pady=3)
 
         self.load_config()
+
 
     def browse_folder(self):
         folder = filedialog.askdirectory()
@@ -95,6 +103,13 @@ class AsciidleConfigEditor:
     def set_color(self, color_code):
         self.entry_color.delete(0, tk.END)
         self.entry_color.insert(0, color_code)
+
+    def download_stuffs(self):
+        response = messagebox.askyesno("Download Stuffs",
+                                       "The script download-ascii-art.bat will be executed to download additional ASCII art (NSFW). Do you want to continue?")
+
+        if response:
+            os.system("download-ascii-art.bat")
         
     def add_to_path(self):
         script_path = os.path.abspath(sys.argv[0])
