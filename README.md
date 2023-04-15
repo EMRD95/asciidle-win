@@ -38,3 +38,7 @@ To automatically download some old school ASCII art, run download-ascii-art.bat 
 ## Note
 
 In this repository, you will find a C++ program and a Python script that display and configure ASCII art in a console window. When compiled or bundled as executables, these programs might generate false positives with certain antivirus software due to the necessary use of specific functions and libraries, such as Windows API functions like **GetModuleFileName**, **FindFirstFile**, and **GetStdHandle** in the C++ program and **os**, **sys**, **ctypes**, and **tkinter** in the Python script. These functions are often associated with malware but are essential for the intended functionality of the programs in this repository.
+
+## Credits
+
+Thanks to http://www.textfiles.com/art/ for providing a well maintained archive of ASCII arts.
