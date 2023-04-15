@@ -1,6 +1,6 @@
 @echo off
 set "txt_folder=txt"
-set "expected_sha256=732AE6C1B519DF97C8101D79BEDEDD4FED74A0AB704B28DF926A66BB07A7649E"
+set "expected_sha256=732AE6C1B519DF97C8101D79BEDEDD4FED74A0AB704B28DF926A66BB07A7649D"
 
 if exist "%txt_folder%\anime$$.txt" (
     echo Files already exist. Skipping download and extraction.
