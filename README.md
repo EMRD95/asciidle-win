@@ -18,7 +18,7 @@ You can just download `Asciidle` from the [release](https://github.com/EMRD95/as
 
 After running the command, you will find the .exe file in the dist folder created in the same directory as your Python script. Move it to the main folder to set up configuration.
 
-## You can compile an installer for the program
+## Compile an installer for the program
 
 The installer is made with Inno Setup, it automatically set the path to the txt directory to the installation folder.
 Simply [download Inno Setup](https://jrsoftware.org/isdl.php) and build the installer with the .iss script.
