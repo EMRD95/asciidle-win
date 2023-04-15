@@ -167,7 +167,7 @@ class AsciidleConfigEditor:
                     )
                     winreg.SetValueEx(user_key, "Path", 0, winreg.REG_EXPAND_SZ, new_path)
                     winreg.CloseKey(user_key)
-                    messagebox.showinfo("Success", "Asciidle added to PATH for local user and admin, note that it might require refreshing variable environnement or a restart for changes to apply")
+                    messagebox.showinfo("Success", "Asciidle added to PATH for local user and admin. Note that it might require refreshing the variable environment or a restart for changes to take effect.y")
                 except Exception as e:
                     messagebox.showerror("Error", f"Failed to add Asciidle to PATH: {e}")
             else:
