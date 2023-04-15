@@ -4,6 +4,8 @@ Asciidle for windows in C++. This small program lets you display ASCII art in yo
 
 You can just download `Asciidle` from the [release](https://github.com/EMRD95/asciidle-win/releases/tag/asciidle), it's preconfigured and works directly. You can still configure it as wanted from the configuration panel.
 
+https://user-images.githubusercontent.com/114953576/232248764-224c731b-2918-4339-9411-f8c5d1e3ba84.mp4
+
 ## To compile the C++ program:
 
 1. Install Visual Studio Build Tools 2019 with "Desktop development with C++"
