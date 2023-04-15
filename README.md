@@ -14,7 +14,7 @@ You can just download `asciidle-win.zip` from the [release](https://github.com/E
 ## You can use the python configuration GUI as it is or make it an executable too:
 
 1. `pip install pyinstaller`
-2. `pyinstaller --onefile --noconsole asciidle-config.py`
+2. `pyinstaller --onefile --noconsole --icon=res/asciidle-config.ico asciidle-config.py`
 
 After running the command, you will find the .exe file in the dist folder created in the same directory as your Python script. Move it to the main folder to set up configuration.
 
