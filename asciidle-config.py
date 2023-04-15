@@ -30,6 +30,9 @@ class ANSIColorPicker(tk.Toplevel):
         self.title("ANSI Color Picker")
         self.create_color_buttons()
 
+        # Set the custom icon for the Tkinter window
+        self.iconbitmap("res/asciidle-config.ico")
+
         x = pick_color_button.winfo_rootx() + pick_color_button.winfo_width()
         y = pick_color_button.winfo_rooty()
         self.geometry(f"+{x}+{y}")
@@ -81,7 +84,7 @@ class AsciidleConfigEditor:
         self.download_stuffs_button.grid(row=5, column=0, columnspan=2, sticky="W")
 
      # Load the shield icon
-        self.admin_shield_image = PhotoImage(file="admin_shield.png")
+        self.admin_shield_image = PhotoImage(file="res/admin_shield.png")
 
         # Create a button with text and the shield icon
         self.add_to_path_button = tk.Button(master, text="Add asciidle to PATH ", command=self.add_to_path,
@@ -173,6 +176,9 @@ class AsciidleConfigEditor:
 
 if __name__ == "__main__":
     root = tk.Tk()
+    
+    # Set the custom icon for the Tkinter window
+    root.iconbitmap("res/asciidle-config.ico")
+    
     gui = AsciidleConfigEditor(root)
     root.mainloop()
-
