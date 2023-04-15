@@ -45,6 +45,7 @@ Source: "C:\Users\User\Downloads\asciidle-win-main2\asciidle-win-main\{#MyAppExe
 Source: "C:\Users\User\Downloads\asciidle-win-main2\asciidle-win-main\asciidle.cf"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\User\Downloads\asciidle-win-main2\asciidle-win-main\asciidle-config.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\User\Downloads\asciidle-win-main2\asciidle-win-main\download-ascii-art.bat"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\User\Downloads\asciidle-win-main2\asciidle-win-main\download-ascii-art2.bat"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\User\Downloads\asciidle-win-main2\asciidle-win-main\LICENCE"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\User\Downloads\asciidle-win-main2\asciidle-win-main\README.md"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\User\Downloads\asciidle-win-main2\asciidle-win-main\txt\*"; DestDir: "{app}\txt"; Flags: ignoreversion recursesubdirs createallsubdirs
