@@ -2,7 +2,7 @@
 
 Asciidle for windows in C++. This small program lets you display ASCII art in your terminal (cmd or powershell) with some configurations available.
 
-You can just download `asciidle-win.zip` from the [release](https://github.com/EMRD95/asciidle-win/releases/tag/asciidle), configure as wanted and you're done.
+You can just download `Asciidle` from the [release](https://github.com/EMRD95/asciidle-win/releases/tag/asciidle), it's preconfigured and works directly. You can still configure it as wanted from the configuration panel.
 
 ## To compile the C++ program:
 
@@ -17,6 +17,11 @@ You can just download `asciidle-win.zip` from the [release](https://github.com/E
 2. `pyinstaller --onefile --noconsole --icon=res/asciidle-config.ico asciidle-config.py`
 
 After running the command, you will find the .exe file in the dist folder created in the same directory as your Python script. Move it to the main folder to set up configuration.
+
+## You can compile an installer for the program
+
+The installer is made with Inno Setup, it automatically set the path to the txt directory to the installation folder.
+Simply [download Inno Setup](https://jrsoftware.org/isdl.php) and build the installer with the .iss script.
 
 ## For asciidle to work, set the path to your ASCII art folder accordingly.
 
