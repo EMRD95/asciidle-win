@@ -29,7 +29,7 @@ Simply [download Inno Setup](https://jrsoftware.org/isdl.php) and build the inst
 
 ## You can also set asciidle to PATH so it runs from any command line (cmd or powershell) by typing "asciidle"
 
-![image](https://user-images.githubusercontent.com/114953576/230951773-c1a57979-c7e5-4ffd-91ae-3e432653116c.png)
+![image](https://user-images.githubusercontent.com/114953576/232230415-6c72d002-5166-4177-9d94-0b43347a2f9f.png)
 
 You can also run the program directly by executing asciidle.exe.
 
