@@ -108,11 +108,25 @@ class AsciidleConfigEditor:
         self.entry_color.insert(0, color_code)
 
     def download_stuffs(self):
-        response = messagebox.askyesno("Download Stuffs",
-                                       "The script download-ascii-art.bat will be executed to download additional ASCII art (NSFW). Do you want to continue?")
+        def download_option(option):
+            if option == "small":
+                os.system("download-ascii-art.bat")
+            elif option == "large":
+                os.system("download-ascii-art2.bat")
+            download_dialog.destroy()
 
-        if response:
-            os.system("download-ascii-art.bat")
+        download_dialog = tk.Toplevel(self.master)
+        download_dialog.title("Download Options")
+
+        # Set the custom icon for the Tkinter window
+        download_dialog.iconbitmap("res/asciidle-config.ico")
+
+        small_set_button = tk.Button(download_dialog, text="Add a small set of pinups (NSFW, 500KB)", command=lambda: download_option("small"))
+        small_set_button.pack(fill=tk.X, padx=5, pady=5)
+
+        large_set_button = tk.Button(download_dialog, text="Add large set of random Ascii art (NSFW and unsorted, 16MB)", command=lambda: download_option("large"))
+        large_set_button.pack(fill=tk.X, padx=5, pady=5)
+
         
     def add_to_path(self):
         script_path = os.path.abspath(sys.argv[0])
