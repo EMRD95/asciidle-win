@@ -145,6 +145,7 @@ class AsciidleConfigEditor:
                 try:
                     # Check for administrator privileges
                     if ctypes.windll.shell32.IsUserAnAdmin():
+                        # Add to system PATH
                         key = winreg.OpenKey(
                             winreg.HKEY_LOCAL_MACHINE,
                             r"SYSTEM\CurrentControlSet\Control\Session Manager\Environment",
@@ -152,18 +153,28 @@ class AsciidleConfigEditor:
                         )
                         winreg.SetValueEx(key, "Path", 0, winreg.REG_EXPAND_SZ, new_path)
                         winreg.CloseKey(key)
-                        messagebox.showinfo("Success", "Asciidle added to PATH")
                     else:
                         ctypes.windll.shell32.ShellExecuteW(
                             None, "runas", sys.executable, " ".join(sys.argv), None, 1
                         )
                         sys.exit()
+
+                    # Add to user PATH
+                    user_key = winreg.OpenKey(
+                        winreg.HKEY_CURRENT_USER,
+                        r"Environment",
+                        access=winreg.KEY_ALL_ACCESS,
+                    )
+                    winreg.SetValueEx(user_key, "Path", 0, winreg.REG_EXPAND_SZ, new_path)
+                    winreg.CloseKey(user_key)
+                    messagebox.showinfo("Success", "Asciidle added to PATH for local user and admin, note that it might require refreshing variable environnement or a restart for changes to apply")
                 except Exception as e:
                     messagebox.showerror("Error", f"Failed to add Asciidle to PATH: {e}")
             else:
                 messagebox.showerror("Error", "Adding Asciidle to PATH is only supported on Windows")
         else:
             messagebox.showinfo("Info", "Asciidle is already in PATH")
+
 
     def load_config(self):
         try:
