@@ -25,7 +25,7 @@ Simply [download Inno Setup](https://jrsoftware.org/isdl.php) and build the inst
 
 ## For asciidle to work, set the path to your ASCII art folder accordingly.
 
-![image](https://user-images.githubusercontent.com/114953576/232227005-bfba134f-cd11-48df-be66-45c71e899965.png)
+![image](https://user-images.githubusercontent.com/114953576/232246732-029e321d-423d-49a6-ad07-e49b49d5fdfb.png)
 
 ## You can also set asciidle to PATH so it runs from any command line (cmd or powershell) by typing "asciidle"
 
