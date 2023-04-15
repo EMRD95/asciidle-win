@@ -1,0 +1,19 @@
+Congratulations! Asciidle has been successfully installed on your computer.
+
+Getting Started:
+- To launch Asciidle, go to the Start menu and find Asciidle in your list of installed programs or search for 'Asciidle' in the search bar.
+- Use the Asciidle Config Editor to configure Asciidle settings, such as the path to ASCII art files, color codes, and scroll latency.
+
+Troubleshooting:
+- If you encounter any issues while using Asciidle, try reinstalling the application or check the documentation available at https://github.com/EMRD95/asciidle-win
+
+Uninstall Instructions:
+- To uninstall Asciidle, go to Control Panel > Programs and Features, locate Asciidle in the list, and click 'Uninstall'.
+
+Updates and Version History:
+- To stay updated with the latest features and improvements, visit the repository at https://github.com/EMRD95/asciidle-win
+
+Support and Feedback:
+- We appreciate your feedback and are always here to help. If you need support or have any suggestions, please contact us at https://github.com/EMRD95/asciidle-win
+
+Thank you for installing Asciidle, and we hope you enjoy using the application!

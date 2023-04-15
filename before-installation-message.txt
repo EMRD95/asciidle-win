@@ -1,0 +1,17 @@
+Welcome to the Asciidle Installer!
+
+Asciidle is a fun and creative application that displays ASCII art with custom configurations. Before you proceed with the installation, please review the following information:
+
+System Requirements:
+- Windows 7 or later
+
+Installation Instructions:
+- The installer will guide you through the process of installing Asciidle on your computer. Simply follow the on-screen instructions.
+
+License Agreement:
+- By installing Asciidle, you agree to comply with the terms and conditions specified in the license agreement, which can be found in the 'License' section of this installer.
+
+Contact Information:
+- For support, feedback, or any questions about Asciidle, please contact us at https://github.com/EMRD95/asciidle-win
+
+Thank you for choosing Asciidle. Click 'Next' to begin the installation process.
